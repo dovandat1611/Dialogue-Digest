@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="apple-touch-icon" sizes="76x76" href="./assets/img/logo.png">
+<link rel="icon" type="image/png" href="./assets/img/logo.png">
+<title>
+  Dialogue Digest
+</title>
+<!--     Fonts and icons     -->
+<link href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700,800" rel="stylesheet" />
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link id="pagestyle" href="./assets/css/dialogue-digest.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<style>
+  .hidden {
+      display: none;
+  }
+</style>
+</head>
+
+<!-- BODY -->
+<body class="index-page">
+
+<!-- Navbar -->
+<div class="container position-sticky z-index-sticky top-0"><div class="row"><div class="col-12">
+<nav class="navbar navbar-expand-lg  blur blur-rounded top-0 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
+  <div class="container-fluid px-0">
+    <a class="navbar-brand font-weight-bolder ms-sm-3" href="#"
+     rel="tooltip" data-bs-toggle="tooltip" data-placement="bottom" title="Dialogue Digest" >
+      <span class="text-danger text-gradient">Dialogue Digest</span>
+    </a>
+
+    <!-- RESPONSIVE -->
+    <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon mt-2">
+        <span class="navbar-toggler-bar bar1"></span>
+        <span class="navbar-toggler-bar bar2"></span>
+        <span class="navbar-toggler-bar bar3"></span>
+      </span>
+    </button>
+
+    <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100" id="navigation">
+      <ul class="navbar-nav navbar-nav-hover ms-lg-12 ps-lg-5 w-100">
+        <li class="nav-item ms-lg-auto">
+          <a class="nav-link nav-link-icon me-2" href="https://www.instagram.com/dovandaatt/" target="_blank">
+            <p class="d-inline text-sm z-index-1 font-weight-bold" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Visit Instagram">@dovandaatt </p>
+          </a>
+        </li>
+        <li class="nav-item my-auto ms-3 ms-lg-0">
+          <a href="#"
+            class="btn btn-sm text-white  bg-dark  btn-round mb-0 me-1 mt-2 mt-md-0" data-bs-toggle="modal" data-bs-target="#donateModal">Donate to me &#128184;
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+</div></div></div>
+<!-- End Navbar -->
+<!-- MODAL -->
+<div class="modal fade" id="donateModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">QR Code &#128525;</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+          <img src="https://img.vietqr.io/image/MB-000161102-compact.png" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+      </div>
+      <div class="modal-footer justify-content-lg-center">
+        <button type="button" class="btn bg-gradient-dark" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="surpriseModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Xin chàooooo! &#128075;</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Chúc bạn một ngày thật là vuiiii &#129392;
+        <br>
+        Thật luôn đẹp trai xinh gái và quan trọng nhất là <span class="text-success text-gradient fw-bold">GIÀU GIÀU GIÀU</span> nhée! 💅🏻💵
+        <br>
+      </div>
+      <div class="modal-footer justify-content-lg-center">
+        <button type="button" class="btn bg-gradient-dark" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END MODEL -->
+
+<!-- HEADER -->
+<header class="header-2">
+  <div class="page-header min-vh-70 relative" style="background-image: url('')">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7 text-center mx-auto">
+          <h1 class="text-danger text-gradient" style="font-weight: 900;">Speech to Text Converter</h1>
+            <h1 class="text-danger text-gradient" style="font-weight: 900;">
+              <span class="text-primary text-gradient blink">
+                D
+              </span>
+              i
+              <span class="text-primary text-gradient blink">
+                a
+              </span>
+              logue Diges
+              <span class="text-primary text-gradient blink">
+                t
+              </span>
+            </h1>
+          <p class="lead mt-3">Dialogue Digest uses AI to summarize your conversations.
+            <br/>Select the language you speak before recording!</p>
+           
+          <div class="col-4 mx-auto">
+            <select id="language-select" class="form-control selectoption text-center">
+              <option value="vi" selected>🇻🇳 Vietnamese</option>
+              <option value="en">🇺🇸 English</option>
+              <option value="ja">🇯🇵 Japanese</option>
+              <option value="zh">🇨🇳 Chinese</option>
+              <option value="ko">🇰🇷 Korean</option>
+              <option value="de">🇩🇪 German</option>
+              <option value="fr">🇫🇷 French</option>
+              <option value="ar">🇸🇦 Arabic</option>
+            </select>
+          </div>   
+
+        </div>
+      </div>
+    </div>
+
+    <div class="position-absolute w-100 z-index-1 bottom-0">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 40" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="moving-waves">
+          <use xlink:href="#gentle-wave" x="48" y="-1" fill="rgba(239, 68, 68,0.40" />
+          <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.35)" />
+          <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.25)" />
+          <use xlink:href="#gentle-wave" x="48" y="8" fill="rgba(255,255,255,0.20)" />
+          <use xlink:href="#gentle-wave" x="48" y="13" fill="rgba(255,255,255,0.15)" />
+          <use xlink:href="#gentle-wave" x="48" y="16" fill="rgba(255,255,255,0.95" />
+        </g>
+      </svg>
+    </div>
+  </div>
+</header>
+<!-- END HEADER -->
+  <div class="container mt-3">
+
+        <div class="text-center mb-7">
+          <button class="btn bg-gradient-primary mb-3 w-auto me-2" data-bs-toggle="tooltip" data-bs-placement="bottom" 
+          title="Star Recording" id="start-btn">
+            <i class="fas fa-microphone fa-3x">
+            </i>
+          </button>
+          <button class="btn bg-gradient-danger  mb-3 w-auto me-2 hidden" data-bs-toggle="tooltip" data-bs-placement="bottom" 
+          title="Stop Recording" onclick="fetchGeneratedContent()" id="stop-btn">
+            <i class="fas fa-record-vinyl fa-3x">
+            </i>
+          </button>
+        </div>
+        <!-- <div class="text-center mb-7">
+
+        </div> -->
+
+
+        <div class="position-relative border-radius-xl overflow-hidden shadow-lg mb-7">
+          <div class="container border-bottom">
+            <div class="row justify-space-between py-2">
+              <div class="col-lg-3 me-auto">
+                <h3 class="font-weight-bolder mt-3">Audio</h3>
+              </div>
+              <div class="col-lg-6">
+                <div class="nav-wrapper position-relative end-0 text-lg-center">
+                  <audio class="btn" controls="" id="audio-playback"></audio>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="nav-wrapper position-relative end-0 text-lg-end">
+                  <button class="btn bg-gradient-primary" id="audio-download"
+                  data-bs-toggle="tooltip" title="Download Audio"
+                  disabled> 
+                    <i class="fa fa-audio-description" aria-hidden="true"></i>
+                    Download  
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <div>
+      <div class="position-relative border-radius-xl overflow-hidden shadow-lg mb-7">
+        <div class="container border-bottom">
+          <div class="row justify-space-between py-2">
+            <div class="col-lg-3 me-auto">
+              <h3 class="font-weight-bolder mt-3">Transcription</h3>
+            </div>
+            <div class="col-lg-3">
+              <div class="nav-wrapper position-relative end-0 text-lg-end">
+                <button class="btn btn-sm bg-gradient-danger" id="export-pdf-transcription" data-bs-toggle="tooltip" title="Export to DPF">
+                  <img style="width: 20px; height: 20px;" alt="Icon of a PDF document" src="https://cdn-icons-png.flaticon.com/512/9158/9158689.png"/>
+                  PDF
+                  </button>
+                  <button class="btn btn-sm bg-gradient-info" id="export-docx-transcription" data-bs-toggle="tooltip" title="Export to DOC">
+                  <img style="width: 20px; height: 20px;" alt="Icon of a DOCX document" src="https://cdn-icons-png.flaticon.com/512/5968/5968517.png"/>
+                  DOC
+                  </button>
+                  <button class="btn btn-sm bg-gradient-light" id="export-txt-transcription" data-bs-toggle="tooltip"  title="Export to TXT">
+                  <img style="width: 20px; height: 20px;" alt="Icon of a TXT document" src="https://cdn-icons-png.flaticon.com/512/8243/8243060.png"/>
+                  TXT
+                  </button>
+                  <a class="btn btn-sm bg-gradient-dark" onclick="copyText();" data-bs-toggle="tooltip" title="Copy Text"><i class="fas fa-copy text-sm me-1"></i> Copy</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="tab-content tab-space">
+          <div class="tab-pane active">
+            <div class="position-relative p-4 pb-2">
+              <textarea class="form-control textarea me-auto" rows="9" id="transcription-text" disabled placeholder="Your transcribed text will appear here..."></textarea>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div>
+
+      <!-- <div class="tab-content tab-space">
+        
+      </div> -->
+  
+      <div class="position-relative border-radius-xl overflow-hidden shadow-lg mb-7">
+        <div class="container border-bottom">
+          <div class="row justify-space-between py-2">
+            <div class="col-lg-3 me-auto">
+              <h3 class="font-weight-bolder mt-3">Summarize Recording with <span class="text-danger text-gradient">AI</span></h3>
+            </div>
+            <div class="col-lg-3">
+              <div class="nav-wrapper position-relative end-0 text-lg-end">
+                <button class="btn btn-sm bg-gradient-danger" id="export-pdf-AI" data-bs-toggle="tooltip" title="Export to DPF">
+                  <img style="width: 20px; height: 20px;" alt="Icon of a PDF document" src="https://cdn-icons-png.flaticon.com/512/9158/9158689.png"/>
+                  PDF
+                  </button>
+                  <button class="btn btn-sm bg-gradient-info" id="export-docx-AI" data-bs-toggle="tooltip" title="Export to DOC">
+                  <img style="width: 20px; height: 20px;" alt="Icon of a DOCX document" src="https://cdn-icons-png.flaticon.com/512/5968/5968517.png"/>
+                  DOC
+                  </button>
+                  <button class="btn btn-sm bg-gradient-light" id="export-txt-AI" data-bs-toggle="tooltip"  title="Export to TXT">
+                  <img style="width: 20px; height: 20px;" alt="Icon of a TXT document" src="https://cdn-icons-png.flaticon.com/512/8243/8243060.png"/>
+                  TXT
+                  </button>
+                  <a class="btn btn-sm bg-gradient-dark" onclick="copyCodeAI();" data-bs-toggle="tooltip" title="Copy Text"><i class="fas fa-copy text-sm me-1"></i> Copy</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="tab-content tab-space">
+          <div class="tab-pane active">
+            <div class="position-relative p-4 pb-2">
+              <div class="form-control me-auto overflow-y-auto" id="transcription-text-AI" style="height: 13.5em; font-size: 14px;" placeholder="Summary of the conversation here...">
+                Summary of the conversation here...
+              </div>
+              <!-- <textarea class="form-control textarea me-auto" rows="9" id="transcription-text-AI" disabled placeholder="Summary of the conversation here..."></textarea> -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+   </div>
+
+
+<div class="container mt-sm-5">
+  <div class="card card-background min-vh-50 my-sm-3 mb-3 border-radius-xl card-background-mask-dark tilt" data-tilt>
+    <div class="full-background" style="background-image: url('/assets/img/banner.jpg')"></div>
+    <div class="card-body pt-7 text-start">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 ms-lg-5">
+            <h4 class="text-white mb-0">Built by <span class="text-primary text-gradient">@dovandaatt</span></h4>
+            <h1 class="text-white">love all</h1>
+            <p class="lead text-white opacity-8">Special thanks to <span class="text-primary text-gradient">chatgpt 🤍</span> for answering my questions.</p>
+            <a href="https://www.instagram.com/dovandaatt/" class="btn btn-outline-white mt-5 up btn-round" target="_blank">
+              <!-- <i class="fas fa-instagram-square text-sm ms-1"></i> -->
+              Visit Instagram
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- START Section Content W/ 2 images aside of icon title description -->
+<section class="pt-lg-7 pt-5">
+  <div class="container">
+    <div class="row">
+      <!-- First Div -->
+      <div class="col-lg-6 col-md-12 ms-auto me-auto p-lg-6 mt-lg-0 mt-4">
+        <div class="card card-background card-background-mask-dark tilt" data-tilt>
+          <div class="full-background" style="background-image: url('/assets/img/avatar.jpg')"></div>
+          <div class="card-body pt-7 text-center">
+            <h4><span class="text-primary text-gradient">@ashin</span></h4>
+            <a href="" data-bs-toggle="modal" data-bs-target="#surpriseModal" class="btn btn-outline-white mt-5 up btn-round">Click Here !!</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Second Div -->
+      <div class="col-lg-6 col-md-12 ms-auto me-auto p-lg-6 mt-lg-0 mt-4">
+        <div class="p-3 pt-0">
+          <h4 class="text-gradient text-primary mb-0">Dialogue Digest</h4>
+          <h4 class="mb-4"><a href="https://twitter.com/dnyivn" target="_blank" rel="nofollow">Instructions for use</a></h4>
+          <ol>
+            <li>Click the microphone icon to start talking.</li>
+            <li>Click again to stop recording when done.</li>
+            <li>Play or download the audio.</li>
+            <li>View the conversation script.</li>
+            <li>AI (Artificial Intelligence) to summarize your script.</li>
+            <li>Export in PDF, Excel, TXT, or copy the text.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- END Section Content -->
+
+  <section class="mt-10 pt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9 z-index-2 border-radius-xl mt-n10 mx-auto py-3 blur shadow-blur">
+          <div class="row">
+            <div class="col-md-12 text-center position-relative">
+              <h2 class="mt-5 mb-6"><span class="text-info text-gradient">Social Media</span></h2>
+            </div>
+            <div class="col-md-2 position-relative">
+              <div class="p-3 text-center">
+                <a href="https://www.facebook.com/dovandaatt" class="btn btn-facebook mb-0 me-2" target="_blank"
+                data-bs-toggle="tooltip" data-placement="bottom" title="Visit Facebook" >
+                  <i class="fab fa-facebook-square me-1"></i> Facebook
+                </a>
+              </div>
+              <hr class="vertical dark">
+            </div>
+            <div class="col-md-2 position-relative">
+              <div class="p-3 text-center">
+                <a href="https://www.facebook.com/dovandat1611" class="btn btn-linkedin mb-0 me-2" target="_blank"
+                data-bs-toggle="tooltip" data-placement="bottom" title="Visit Linkedin" >
+                  <i class="fab fa-linkedin-in me-1"></i> Linkedin
+                </a>
+              </div>
+              <hr class="vertical dark">
+            </div>
+            <div class="col-md-2 position-relative">
+              <div class="p-3 text-center">
+                <a href="https://www.youtube.com/@dovandaatt" class="btn btn-youtube mb-0 me-2" target="_blank"
+                data-bs-toggle="tooltip" data-placement="bottom" title="Visit Youtube">
+                  <i class="fab fa-youtube-square me-1"></i> Youtube
+                </a>
+              </div>
+              <hr class="vertical dark">
+            </div>
+            <div class="col-md-2 position-relative">
+              <div class="p-3 text-center">
+                <a href="https://www.tiktok.com/@dovandaatt" class="btn btn-dark mb-0 me-2" target="_blank"
+                data-bs-toggle="tooltip" data-placement="bottom" title="Visit Tiktok">
+                  <i class="fab fa-tiktok me-1"></i> Tiktok
+                </a>
+              </div>
+              <hr class="vertical dark">
+            </div>
+            <div class="col-md-2 position-relative">
+              <div class="p-3 text-center">
+                <a href="https://github.com/dovandat1611" class="btn btn-github mb-0 me-2" target="_blank"
+                data-bs-toggle="tooltip" data-placement="bottom" title="Visit Github">
+                  <i class="fab fa-github me-1"></i> Github
+                </a>
+              </div>
+              <hr class="vertical dark">
+            </div>
+            <div class="col-md-2 position-relative">
+              <div class="p-3 text-center">
+                <a href="https://www.pinterest.com/pin/create/button/?url=" class="btn btn-pinterest mb-0 me-2" target="_blank"
+                data-bs-toggle="tooltip" data-placement="bottom" title="Visit Pinterest">
+                  <i class="fab fa-pinterest me-1"></i> Pinterest
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+<!-- -------   END PRE-FOOTER 2 - simple social line w/ title & 3 buttons    -------- -->
+  
+
+  <footer class="footer pt-5 mt-5">
+  <hr class="horizontal dark mb-5">
+  <div class="container">
+    <div class=" row">
+
+      <div class="col-12">
+        <div class="text-center">
+          <p class="my-4 text-sm">
+            All rights reserved. Copyright © <script>document.write(new Date().getFullYear())</script> Dialogue Digest by <a href="https://www.instagram.com/dovandaatt/" target="_blank">@dovandaatt</a>.
+          </p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+
+
+
+<!--   Core JS Files   -->
+<script src="./assets/js/core/popper.min.js" type="text/javascript"></script>
+<script src="./assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+<script src="./assets/js/plugins/perfect-scrollbar.min.js"></script>
+<!--  Plugin for TiltJS, full documentation here: https://gijsroge.github.io/tilt.js/ -->
+<script src="./assets/js/plugins/tilt.min.js"></script>
+<!-- Control Center for Soft UI Kit: parallax effects, scripts for the example pages etc -->
+<script src="./assets/js/dialogue-digest.min.js" type="text/javascript"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script> 
+<script src="./assets/js/app.js" type="text/javascript"></script>
+<script src="./assets/js/gemini.js" type="text/javascript"></script>
+
+
+</body>
+</html>
