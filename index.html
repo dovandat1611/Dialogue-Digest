@@ -100,6 +100,16 @@
 </div>
 <!-- END MODEL -->
 
+<!-- ALERT -->
+
+<!-- <div
+  id="customAlert"
+  class="alert alert-primary text-white font-weight-bold w-25 text-center"
+  role="alert"
+>
+  Text copied to clipboard!
+</div> -->
+
 <!-- HEADER -->
 <header class="header-2">
   <div class="page-header min-vh-70 relative" style="background-image: url('')">
@@ -223,7 +233,7 @@
                   <img style="width: 20px; height: 20px;" alt="Icon of a TXT document" src="https://cdn-icons-png.flaticon.com/512/8243/8243060.png"/>
                   TXT
                   </button>
-                  <a class="btn btn-sm bg-gradient-dark" onclick="copyText();" data-bs-toggle="tooltip" title="Copy Text"><i class="fas fa-copy text-sm me-1"></i> Copy</a>
+                  <a class="btn btn-sm bg-gradient-dark" id="copy-text-transcription" data-bs-toggle="tooltip" title="Copy Text"><i class="fas fa-copy text-sm me-1"></i> Copy</a>
               </div>
             </div>
           </div>
@@ -446,7 +456,8 @@
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
 <script src="./assets/js/app.js" type="text/javascript"></script>
 <script src="./assets/js/gemini.js" type="text/javascript"></script>
 
